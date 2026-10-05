@@ -1,0 +1,13 @@
+// Site behaviour, unminified and blocking
+function setYear() {
+  var el = document.getElementById("year");
+  el.textContent = new Date().getFullYear();
+}
+function highlightCards() {
+  var cards = document.querySelectorAll(".card");
+  for (var i = 0; i < cards.length; i++) {
+    cards[i].addEventListener("mouseenter", function () { this.style.transform = "translateY(-4px)"; });
+    cards[i].addEventListener("mouseleave", function () { this.style.transform = "none"; });
+  }
+}
+window.addEventListener("DOMContentLoaded", function () { setYear(); highlightCards(); });

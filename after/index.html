@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alex Doe | Portfolio (Optimized)</title>
+  <!-- Preload the LCP image so it starts downloading immediately -->
+  <link rel="preload" as="image" href="img/hero-960.webp" imagesrcset="img/hero-480.webp 480w, img/hero-960.webp 960w" imagesizes="100vw" fetchpriority="high">
+  <link rel="stylesheet" href="style.min.css">
+  <!-- Non-blocking scripts -->
+  <script src="main.min.js" defer></script>
+  <script src="analytics.min.js" async></script>
+</head>
+<body>
+  <header>
+    <h1>Alex Doe</h1>
+    <nav><a href="#work">Work</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  </header>
+
+  <div class="hero">
+    <!-- Above the fold: eager, high priority, explicit size to prevent layout shift -->
+    <img src="img/hero-960.webp" srcset="img/hero-480.webp 480w, img/hero-960.webp 960w" sizes="100vw" width="960" height="600" fetchpriority="high" alt="Abstract colourful hero banner">
+    <div class="hero-text"><h2>Hi, I'm Alex</h2><p>Front-end developer building fast, friendly web pages.</p></div>
+  </div>
+
+  <section id="work">
+    <h2>Selected Work</h2>
+    <div class="grid">
+      <div class="card"><img src="img/project1-480.webp" srcset="img/project1-480.webp 480w, img/project1-960.webp 960w" sizes="(max-width:800px) 100vw, 350px" width="480" height="300" loading="lazy" decoding="async" alt="Project one"><h3>Weather Dashboard</h3><p>Live forecasts with clean charts.</p></div>
+      <div class="card"><img src="img/project2-480.webp" srcset="img/project2-480.webp 480w, img/project2-960.webp 960w" sizes="(max-width:800px) 100vw, 350px" width="480" height="300" loading="lazy" decoding="async" alt="Project two"><h3>Recipe Finder</h3><p>Search recipes by ingredient.</p></div>
+      <div class="card"><img src="img/project3-480.webp" srcset="img/project3-480.webp 480w, img/project3-960.webp 960w" sizes="(max-width:800px) 100vw, 350px" width="480" height="300" loading="lazy" decoding="async" alt="Project three"><h3>Budget Tracker</h3><p>Track spending with simple reports.</p></div>
+    </div>
+  </section>
+
+  <section id="about"><h2>About</h2><p>I design and build responsive websites with a focus on performance and accessibility.</p></section>
+  <section id="contact"><h2>Contact</h2><p>Email: alex@example.com</p></section>
+
+  <footer>&copy; <span id="year"></span> Alex Doe</footer>
+</body>
+</html>
